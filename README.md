@@ -5,6 +5,16 @@
    - Router
    - Login Form
    - Sign Up Form
+   - validation Form
+   - useRef hooks
+   - Firebase Setup
+   - Deploy our to Prodution
+   - Create sign up user account
+   - implement sign in user api
+   - create redux store with userslice
+   - implemented sign out 
+   - update profile 
+   - bugfix: sign up user displayName and profile picture update
 
 -  # Features
     -login / sign up
