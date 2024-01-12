@@ -11,6 +11,7 @@ import { auth } from "../utils/firebase";
 
 import { addUser } from "../utils/userslice";
 import { useDispatch } from "react-redux";
+import { user_logo } from "../utils/constant";
 
 const Login = () => {
   const [IsSignInForm, SetSignInForm] = useState(true);
@@ -45,8 +46,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://avatarfiles.alphacoders.com/144/144986.jpg",
+            photoURL: user_logo,
           })
             .then(() => {
               const {uid, email, displayName ,photoURL} = auth.currentUser;

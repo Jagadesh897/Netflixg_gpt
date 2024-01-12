@@ -15,6 +15,7 @@
    - implemented sign out 
    - update profile 
    - bugfix: sign up user displayName and profile picture update
+   - bugfix: if the user is not logged in redirect /Browse to login page and vice versa
 
 -  # Features
     -login / sign up
