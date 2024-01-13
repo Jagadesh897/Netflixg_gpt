@@ -5,7 +5,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userslice";
-import { logo_url } from "../utils/constant";
+import { logo_url, user_logo} from "../utils/constant";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Header = () => {
         <div className="flex p-2">
           <img
             className="size-12 w-12 h-12 "
-            src={user.photoURL} 
+            src={user_logo} 
             alt="userIcon"
           />
           <button className="font-bold text-white" onClick={handleSignOut}>
