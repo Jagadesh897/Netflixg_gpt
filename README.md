@@ -28,6 +28,7 @@
    - update store with trailer video data
    - embedded the youtube video and make it autoplay and mute
    - tailwind classeds tomake main container look awesome
+   - build a Secondary component
 
 -  # Features
     -login / sign up
