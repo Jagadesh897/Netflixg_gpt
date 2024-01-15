@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom CSS for hiding scrollbar */
+::-webkit-scrollbar {
+    display: none;
+  }
+  

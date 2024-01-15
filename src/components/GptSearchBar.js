@@ -23,7 +23,7 @@ const GptSearchBar = () => {
   };
 
   const handleGptSearchclick = async () => {
-    console.log(serachText.current.value);
+   
     //Make an APi call to GPt api and get Movie results
     const gptQuerry =
       "Act as a Movie Recommendation System and Suggest some movies for the querry " +
@@ -38,7 +38,7 @@ const GptSearchBar = () => {
       /*TODO : Write ERROR Handling Here */
     }
 
-    console.log(gptResults.choices[0]?.message?.content);
+    
 
     const gptmovies = gptResults.choices[0]?.message?.content.split(",");
     //for each movie i will search  TMDb API
@@ -46,14 +46,14 @@ const GptSearchBar = () => {
     const promiseArray = gptmovies.map((movie) => searchMovieTmdb(movie));
     // it will return a 5 promise array [promise,]
     const tmdbResults = await Promise.all(promiseArray);
-    console.log(tmdbResults);
+    
     dispatch(addGptMovieResults({movieNames: gptmovies ,movieResults :tmdbResults}))
   };
 
   return (
-    <div className="pt-[8%] flex justify-center">
+    <div className="pt-[40%] md:pt-[10%] flex justify-center">
       <form
-        className="w-1/2 bg-black grid grid-cols-12 "
+        className="md:w-1/2 bg-black grid grid-cols-12 "
         onSubmit={(e) => e.preventDefault()}
       >
         <input
